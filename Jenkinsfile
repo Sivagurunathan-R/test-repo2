@@ -9,6 +9,16 @@ pipeline {
   
   stages {
     
+    stage('maven_install'){
+      
+      steps{
+      script{
+      
+        withMaven(globalMavenSettingsConfig : "$mavenConfig", jdk : "$JDKVersion" , maven :"$mavenLocation" )
+        
+      }
+      }
+    }
     
     stage('build') {
       steps {
