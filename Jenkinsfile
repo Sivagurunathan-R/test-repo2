@@ -13,7 +13,7 @@ pipeline {
         
         sh '''
         echo "PATH = ${PATH}"
-        echo "MAVEN_HOME = ${MAVEN_HOME}"
+echo "M2_HOME = ${M2_HOME}"
         '''
       }
     }
